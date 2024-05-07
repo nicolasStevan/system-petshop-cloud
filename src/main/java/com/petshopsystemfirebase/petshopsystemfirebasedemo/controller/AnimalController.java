@@ -29,6 +29,13 @@ public class AnimalController {
         return animalService.getAnimalDetails();
     }
 
+    /*
+    @GetMapping("/animais/{id}/show")
+    public Animal showAnimal(@PathVariable long id) throws ExecutionException, InterruptedException {
+        return animalService.getAnimalDetailsById(id);
+    }
+    */
+
     @PutMapping("/animais/{id}")
     public String update(@PathVariable String id, @RequestBody Animal animal) throws ExecutionException, InterruptedException {
         // Defina apenas os outros campos do animal para atualização
